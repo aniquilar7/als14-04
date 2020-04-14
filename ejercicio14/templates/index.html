@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura</title>
+
+    <script>
+        function check() {
+            const emCif = document.getElementById("emCif");
+            const emNom = document.getElementById("emNom");
+            const emDir = document.getElementById("emDir");
+            const emPob = document.getElementById("emPob");
+            const emPro = document.getElementById("emPro");
+            const emCod = document.getElementById("emCod");
+            const emPais = document.getElementById("emPais");
+            const emPer = document.getElementById("emPer");
+            const emEmail = document.getElementById("emEmail");
+            const emTel = document.getElementById("emTel");
+            const clCif = document.getElementById("clCif");
+            const clNom = document.getElementById("clNom");
+            const clDir = document.getElementById("clDir");
+            const clPob = document.getElementById("clPob");
+            const clPro = document.getElementById("clPro");
+            const clCod = document.getElementById("clCod");
+            const clPais = document.getElementById("clPais");
+            const clPer = document.getElementById("clPer");
+            const clEmail = document.getElementById("clEmail");
+            const clTel = document.getElementById("clTel");
+            const con = document.getElementById("con");
+            const prc = document.getElementById("prc");
+            const und = document.getElementById("und");
+            const imp = document.getElementById("imp");
+            const iva = document.getElementById("iva");
+            const total = document.getElementById("total");
+
+            return emCif.value.trim().length > 0
+                    && emNom.value.trim().length > 0
+                    && emDir.value.trim().length > 0
+                    && emPob.value.trim().length > 0
+                    && emPro.value.trim().length > 0
+                    && emCod.value.trim().length > 0
+                    && emPais.value.trim().length > 0
+                    && emPer.value.trim().length > 0
+                    && emEmail.value.trim().length > 0
+                    && emTel.value.trim().length > 0
+                    && clCif.value.trim().length > 0
+                    && clNom.value.trim().length > 0
+                    && clDir.value.trim().length > 0
+                    && clPob.value.trim().length > 0
+                    && clPro.value.trim().length > 0
+                    && clCod.value.trim().length > 0
+                    && clPais.value.trim().length > 0
+                    && clPer.value.trim().length > 0
+                    && clEmail.value.trim().length > 0
+                    && clTel.value.trim().length > 0
+                    && con.value.trim().length > 0
+                    && prc.value.trim().length > 0
+                    && und.value.trim().length > 0
+                    && imp.value.trim().length > 0
+                    && iva.value.trim().length > 0
+                    && total.value.trim().length > 0;
+        }
+    </script>
+</head>
+<body>
+    <h1>Datos factura</h1>
+
+    <form id="frmFactura" action="/index" method="post" onsubmit="return check()">
+        <h2>Datos emisor</h2>
+        <label for="emCif">CIF: </label>
+        <input type="text" id="emCif" name="emCif" /><br>
+        <label for="emNom">Nombre: </label>
+        <input type="text" id="emNom" name="emNom" /><br>
+        <label for="emDir">Dirección: </label>
+        <input type="text" id="emDir" name="emDir" /><br>
+        <label for="emPob">Población: </label>
+        <input type="text" id="emPob" name="emPob" /><br>
+        <label for="emPro">Provincia: </label>
+        <input type="text" id="emPro" name="emPro" /><br>
+        <label for="emCod">Código Postal: </label>
+        <input type="number" id="emCod" name="emCod" /><br>
+        <label for="emPais">País: </label>
+        <input type="text" id="emPais" name="emPais" /><br>
+        <label for="emPer">Persona de contacto: </label>
+        <input type="text" id="emPer" name="emPer" /><br>
+        <label for="emEmail">Email: </label>
+        <input type="text" id="emEmail" name="emEmail" /><br>
+        <label for="emTel">Teléfono: </label>
+        <input type="number" id="emTel" name="emTel" /><br>
+
+        <h2>Datos cliente</h2>
+        <label for="clCif">CIF: </label>
+        <input type="text" id="clCif" name="clCif" /><br>
+        <label for="clNom">Nombre: </label>
+        <input type="text" id="clNom" name="clNom" /><br>
+        <label for="clDir">Dirección: </label>
+        <input type="text" id="clDir" name="clDir" /><br>
+        <label for="clPob">Población: </label>
+        <input type="text" id="clPob" name="clPob" /><br>
+        <label for="clPro">Provincia: </label>
+        <input type="text" id="clPro" name="clPro" /><br>
+        <label for="clCod">Código Postal: </label>
+        <input type="number" id="clCod" name="clCod" /><br>
+        <label for="clPais">País: </label>
+        <input type="text" id="clPais" name="clPais" /><br>
+        <label for="clPer">Persona de contacto: </label>
+        <input type="text" id="clPer" name="clPer" /><br>
+        <label for="clEmail">Email: </label>
+        <input type="text" id="clEmail" name="clEmail" /><br>
+        <label for="clTel">Teléfono: </label>
+        <input type="number" id="clTel" name="clTel" /><br>
+
+        <h2>Línea de detalle</h2>
+        <label for="con">Concepto: </label>
+        <input type="text" id="con" name="con" /><br>
+        <label for="prc">Precio por unidad: </label>
+        <input type="number" id="prc" name="prc" /><br>
+        <label for="und">Unidades: </label>
+        <input type="number" id="und" name="und" /><br>
+        <label for="imp">Importe bruto: </label>
+        <input type="number" id="imp" name="imp" /><br>
+        <label for="iva">IVA: </label>
+        <input type="number" id="iva" name="iva" /><br>
+        <label for="total">Importe total: </label>
+        <input type="text" id="total" name="total" /><br>
+
+        <input type="submit" value="Aceptar" />
+    </form>
+</body>
+</html>

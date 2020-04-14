@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura</title>
+</head>
+<body>
+    <h1>Factura</h1>
+    <p>Fecha {{ fecha }}</p>
+    <p><h2>Datos Emisor</h2></p>
+    <p>Cif: {{ emCif }} Nombre: {{ emNom }}  Direccion: {{ emDir }}</p>
+    <p>Población: {{ emPob }} Provincia: {{ emPro }} Código Postal: {{ emCod }} País: {{ emPais }}</p>
+    <p>Persona de contacto: {{ emPer }} Email: {{ emEmail }} Telefono: {{ emTel }}</p>
+
+    <p><h2>Datos Cliente</h2></p>
+    <p>Cif: {{ clCif }} Nombre: {{ clNom }}  Direccion: {{ clDir }}</p>
+    <p>Población: {{ clPob }} Provincia: {{ clPro }} Código Postal: {{ clCod }} País: {{ clPais }}</p>
+    <p>Persona de contacto: {{ clPer }} Email: {{ clEmail }} Telefono: {{ clTel }}</p>
+
+    <p><h2>Línea de detalle</h2></p>
+    <p>Concepto: {{ con }} Precio por unidad: {{ prc }}  Unidades: {{ und }} Importe bruto: {{ imp }}</p>
+    <p>IVA: {{ iva }} Total: {{ total }}</p>
+</body>
+</html>
